@@ -34,6 +34,7 @@ func GeneratePassword(numberOfCharacters int, useDigits bool, useSymbols bool) (
 		char, err := getRandomElement(characterPool)
 		if err != nil {
 			log.Print("Error retrieving char from string")
+			return "", err
 		}
 		resultString += char
 	}

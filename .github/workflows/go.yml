@@ -22,8 +22,8 @@ jobs:
 
     - name: Build
       run:  go build -v ./...
-      working-directory: &{{env.working-directory}}
+      working-directory: ${{env.working-directory}}
 
     - name: Test
       run: go test -v ./...
-      working-directory: &{{env.working-directory}}
+      working-directory: ${{env.working-directory}}

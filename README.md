@@ -1,5 +1,5 @@
 # icanhazpw
-ICanHazPW is obviously a nod to the popular service by [Major Hayden](https://github.com/major).
+ICanHazPW is a nod to the popular service by [Major Hayden](https://github.com/major).
 The idea is to provide an easy way to retrieve secure passwords. 
 
 ## "Roadmap"

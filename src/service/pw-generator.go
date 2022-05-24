@@ -1,6 +1,7 @@
 package service
 
 import (
+	"errors"
 	"log"
 	"math/rand"
 	"time"
@@ -21,6 +22,9 @@ const (
 )
 
 func GeneratePassword(numberOfCharacters int, useDigits bool, useSymbols bool) (string, error) {
+	if numberOfCharacters < 1 {
+		return "", errors.New("Invalid password length")
+	}
 	characterPool := LowerLetters + UpperLetters
 	if useDigits {
 		characterPool += Digits

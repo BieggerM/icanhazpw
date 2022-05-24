@@ -10,6 +10,8 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    env:
+      working-directory = ./src
     steps:
     - uses: actions/checkout@v3
 
@@ -19,7 +21,7 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      run: go build -v ./...
+      run:  go build -v ./...
 
     - name: Test
       run: go test -v ./...

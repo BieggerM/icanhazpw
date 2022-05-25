@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: icanhazpw-deployment
+  labels:
+    app: icanhazpw
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: icanhazpw
+  template:
+    metadata:
+      labels:
+        app: icanhazpw
+    spec:
+      containers:
+        - name: icanhazpw
+          image: ghcr.io/bieggerm/icanhazpw:main
+          ports:
+            - containerPort: 8080
